@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; all single-player</p>
+  <h1>Leonida Trophy Atlas</h1>
+  <p class="lede">Every GTA VI trophy with its official name, description and grade, a guide in plain words with its sources, a roadmap to the platinum, and a tracker that remembers your progress. Works fully offline &mdash; nothing leaves this page.</p>
+  <div class="stats" id="stats" aria-live="polite">
+    <div class="stat big"><span class="num" id="statPct">0%</span><span class="lbl">complete</span></div>
+    <div class="stat"><span class="num" id="statEarned">0 / 55</span><span class="lbl">trophies earned</span></div>
+    <div class="stat"><span class="num" id="statGrades">0&middot;0&middot;0&middot;0</span><span class="lbl">platinum &middot; gold &middot; silver &middot; bronze</span></div>
+    <div class="stat warn"><span class="num" id="statMissable">1 left</span><span class="lbl">missable trophy remaining</span></div>
+    <div class="bar"><div class="fill" id="barFill" style="width:0%"></div></div>
+    <p class="next" id="nextUp"></p>
+  </div>
+</header>
+
+<nav class="jump">
+  <a href="#roadmap">Roadmap to the platinum</a>
+  <a href="#tracker">Trophy checklist</a>
+  <a href="#notes">Before you start</a>
+  <a href="#sources">Sources</a>
+</nav>
+
+<section id="tracker" class="tracker">
+  <h2>Trophy checklist</h2>
+  <div class="toolbar">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword&hellip;" autocomplete="off"></label>
+    <div class="chips" id="kindChips" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="on">All 55</button>
+      <button type="button" data-kind="story">Story</button>
+      <button type="button" data-kind="missable">Missable</button>
+      <button type="button" data-kind="collectibles">Collectibles</button>
+      <button type="button" data-kind="activities">Activities</button>
+      <button type="button" data-kind="online">Online</button>
+    </div>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label>Sort
+      <select id="sort">
+        <option value="roadmap">Roadmap order</option>
+        <option value="name">Name A&ndash;Z</option>
+        <option value="grade">Grade, best first</option>
+      </select>
+    </label>
+    <label class="spoiler"><input id="spoiler" type="checkbox"> Spoiler mode: hide story trophies until earned</label>
+  </div>
+  <div class="actions">
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset progress</button>
+    <span class="count" id="shown"></span>
+  </div>
+  <p class="online-note" id="onlineNote" hidden>There are no online trophies in GTA VI at launch &mdash; all 55 are single-player (PowerPyx). Nothing to filter here.</p>
+  <div id="list" class="list"></div>
+  <p class="empty" id="empty" hidden>No trophies match this filter. Try clearing the search or choosing another kind.</p>
+</section>
+
+<section id="notes" class="notes">
+  <h2>Before you start</h2>
+  <ul>
+    <li><strong>One trophy can be missed.</strong> Positive Mental Attitude is the only trophy reported as possibly missable: its first meditation spot, at Jason&rsquo;s house in Chapter 1, is said to vanish after that chapter. Do it in Chapter 1 and keep a manual save.</li>
+    <li><strong>There is no mission replay and no New Game Plus.</strong> Keep a manual save at the start of every chapter and one before the final mission. Free roam continues after the story.</li>
+    <li><strong>Leave cheats off.</strong> Using cheats disables trophies and saving.</li>
+    <li><strong>About 200 hours, difficulty 4/10</strong> (PowerPyx), one playthrough, no online trophies. The hardest trophy is A Long Road: 100% completion, with lenient thresholds.</li>
+  </ul>
+</section>
+
+<section id="roadmap" class="roadmap">
+  <h2>Roadmap to the platinum</h2>
+  <p class="hint">Six stages, in order. Tap a trophy chip to open its guide.</p>
+  <div id="stages"></div>
+</section>
+
+
+<footer id="sources">
+  <h2>Sources &amp; honesty note</h2>
+  <p>Official trophy names, descriptions and grades are shown as PlayStation publishes them, reported 18 November 2026 from Exophase and cross-checked with PSNProfiles and TrueAchievements (27 visible, 28 hidden). Every guide on this page is written in this guide&rsquo;s own words; each one names the guide it drew on, with a link, beside it. Seven trophies have no confirmed unlock method published at launch &mdash; those guides say so plainly instead of inventing one.</p>
+  <ul>
+    <li><a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">PowerPyx &mdash; GTA 6 Trophy Guide &amp; Roadmap</a></li>
+    <li><a href="https://www.planetgta6.com/en/gta-6-trophies/">PlanetGTA6 &mdash; GTA 6 Trophies (Exophase / PSNProfiles)</a></li>
+    <li><a href="https://outputlag.com/guides/gta-6-trophy-list/">OutputLag &mdash; GTA 6 Trophy List</a></li>
+    <li><a href="https://www.keengamer.com/articles/guides/gta-6-trophy-guide-platinum-roadmap-all-55-trophies/">KeenGamer &mdash; GTA 6 Trophy Guide &amp; Platinum Roadmap</a></li>
+    <li><a href="https://www.ggrecon.com/articles/gta-6-trophies-achievements-list-platinum/">GGRecon &mdash; GTA 6 trophies list</a></li>
+    <li><a href="https://gta-zone.com/news/gta-6-trophies-achievements/">GTA-Zone &mdash; GTA 6 Trophy List</a></li>
+    <li><a href="https://egamers.io/gta-6-trophy-list-all-55-trophies-and-achievements-plus-the-hardest-ones/">EGamers &mdash; GTA 6 Trophy List</a></li>
+  </ul>
+  <p class="fine">An unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this guide uses no Rockstar logo, artwork or game screenshots. Progress is stored only in your browser (localStorage) and in the file you export.</p>
+</footer>
+
+<div class="modal" id="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <button class="close" id="modalClose" type="button" aria-label="Close">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
