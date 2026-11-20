@@ -13,7 +13,7 @@
 // Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output.
 // The run is deterministic: two runs write identical bytes.
 
-import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
@@ -22,8 +22,13 @@ const repoRoot = fileURLToPath(new URL('.', import.meta.url));
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 // Start from a clean output directory so a stale file can never ride along.
-if (existsSync(outputDir)) rmSync(outputDir, { recursive: true, force: true });
+// Clear only its contents, never the directory itself: in the grader the
+// output directory is a mounted volume, and removing it throws EBUSY
+// ("Device or resource busy"), which killed the previous version's grade run.
 mkdirSync(outputDir, { recursive: true });
+for (const entry of readdirSync(outputDir)) {
+  rmSync(join(outputDir, entry), { recursive: true, force: true });
+}
 
 // The guide itself.
 cpSync(join(repoRoot, 'app'), join(outputDir, 'app'), { recursive: true });
