@@ -1,0 +1,46 @@
+/* Vice Platinum — colour theme. Sunset over Vice City: deep plum nights,
+   neon pink sunsets and warm gold medals. No external fonts or images. */
+:root {
+  --bg: #150a1e;
+  --ink: #f2eaf6;
+  --muted: #b9a8c4;
+  --panel: #221130;
+  --field: #2c183d;
+  --line: #453058;
+  --masthead-bg: #1c0d29;
+  --brand-ink: #ffffff;
+  --accent: #ff4d8d;
+  --accent-soft: #ff7dab;
+  --accent-dark: #ff8fb8;
+  --mark-bg: linear-gradient(135deg, #ff4d8d, #7a2bff);
+  --mark-ring: rgba(255, 77, 141, .35);
+  --track: #3a2350;
+  --fill: linear-gradient(90deg, #ff4d8d, #ffb347);
+  --warn: #ffb347;
+  --warn-bg: #33240f;
+  --earned-line: #3fae7a;
+  --earned-bg: #1d2b26;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f1f9;
+    --ink: #241130;
+    --muted: #6d5a7c;
+    --panel: #ffffff;
+    --field: #f3eaf7;
+    --line: #d9c8e2;
+    --masthead-bg: #efe4f4;
+    --brand-ink: #241130;
+    --accent: #d12a6e;
+    --accent-soft: #e85a92;
+    --accent-dark: #a81e58;
+    --mark-ring: rgba(209, 42, 110, .25);
+    --track: #e6d6ee;
+    --fill: linear-gradient(90deg, #d12a6e, #e89b3c);
+    --warn: #9a6200;
+    --warn-bg: #fff3d6;
+    --earned-line: #2e8b62;
+    --earned-bg: #e9f6ef;
+  }
+}
